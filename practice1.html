@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet"/>
+    <title>Document</title>
+    <style>
+       *{
+        margin :0;
+        padding: 0;
+        box-sizing: border-box;
+       }
+       html, body{
+        width:100%;
+        height:100%;
+       }
+       body{
+        background-color: rgb(216, 224, 232);
+       }
+       /* main{
+        position: relative;
+        width: 100%;
+        height:100%;
+        overflow: hidden;
+       }
+       video{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width:100%;
+        height:120%;
+       }
+       */
+        .main{
+            display:grid;
+            height:100%;
+            width:100%;
+            grid-template-columns: 25% 25% 50%;
+            grid-template-rows: 30% 55% 15%;
+        }
+
+       #square{
+          background-color: #272727;
+          margin: 2.7vw 0 0 6vw;
+          rotate: 45deg;
+          height:1vw;
+          width:1vw;
+       }
+       .left-menu{
+          justify-self: right;
+          padding:2.5vw 0vw 0 0;
+          text-align: right;
+          color:rgb(29, 29, 29);
+          font-family: Sora;
+          letter-spacing: -0.01vw;
+       }
+       .left-menu h6{
+        display:none;
+       }
+       .left-menu h3{
+        margin-bottom:30px;
+        font-size: 1.1vw;
+        font-weight: 400;
+       }
+       .left-menu h4{
+        font-weight: 400;
+        font-size: 1vw;
+       }
+       
+       .left-center{
+         grid-column: 1/3; 
+         line-height: 5.5vw ;
+         padding:0.2vw 0 0 6vw;
+         }
+       .left-center h1{
+         font-size: 5.5vw;
+         color: #252525;
+         text-transform: uppercase; 
+         font-weight: 300;
+         font-family: Sora;
+         letter-spacing: -0.2vw;
+       }
+       .left-center h1:nth-child(2n){
+        text-align: center;
+       }
+
+       .left-bottom{
+        grid-column: 1/3;
+        line-height: 1.3vw;
+        font-family: poppins;
+        font-size: 0.8vw;
+        padding: 0vw 0 0 6vw;
+         }
+        .right{
+          grid-row: 1/4;
+          grid-column: 3;
+          padding:20px 100px 20px 57px;
+
+          
+        } 
+        .right video{
+          height: 100%;
+          width:100%;
+          object-position: top;
+          object-fit:cover;
+        }
+        .arrow{
+          position: absolute;
+          top: 48%;
+          left: 52%;
+          padding:12px;
+          transform: translate(-50% -50%);
+          background-color: rgb(212, 88, 54);
+          color: white;
+          border-radius: 50%;
+        }
+        .arrow i{
+          font-size: 2.1vw;
+          font-stretch: 2vw;
+          font-weight: 100;
+        }
+
+         @media(max-width:600px){
+          .main{
+            grid-template-columns: 50% 50%;
+            grid-template-rows:6% 32% 8%;
+        }
+        #square{
+          margin: 4.3vw 0 0 5vw;
+          height:3vw;
+          width:3vw;
+       }
+       .left-menu{
+          padding:2.7vw 4vw 0 0;
+       }
+       .left-menu h6{
+        display:initial;
+        font-size: 5vw;
+       }
+       .left-menu h3, .left-menu h4{
+        display:none;
+       }
+       
+       .left-center{
+         padding:6vw 7vw 0 7vw;
+         }
+       .left-center h1{
+        line-height: 12vw;
+         font-size: 13vw;
+         letter-spacing: -0.5vw;
+       }
+       .left-center h1:nth-child(2n){
+        text-align: center;
+        padding: 0px 0px 0px 70px;
+       }
+
+       .left-bottom{
+        line-height: 4vw;
+        padding: 4px 20px; 
+         }
+         .left-bottom p{
+          font-size: 1em;  
+         }
+        .arrow{
+         top: 46%;
+         left: 45%;
+         padding:11px;
+         rotate: 90deg;
+         cursor: pointer;
+        }
+        .arrow i{
+          font-size: 5vw;
+          cursor: pointer;
+        }
+        .right{
+          grid-row: 4;
+          grid-column: 1/3;
+          padding:20px 20px 20px 20px
+        } 
+        .right video{
+          height: 48vh;
+        }
+         }
+       
+
+    </style>
+</head>
+
+<body>
+       <div class="main">
+        <div class="left-top">
+        <div id="square"></div></div>
+        <div class="left-menu">
+          <h3>Menu</h3>
+          <h4>Home Page</h4>
+          <h4>Portfolio</h4>
+          <h4>Fashion Week-@2024</h4>
+          <h4>News / Article</h4>
+          <h4>Contact</h4>
+          <h6><i class="ri-menu-3-line"></i></h6>
+        </div>
+        <div class="left-center">
+          <h1>Select</h1>
+          <h1>Fashion</h1>
+          <h1>Mod.05 -</h1>
+          <h1>Scene</h1>
+        </div>
+        <div class="left-bottom">
+          <p>Our modern online platform with a collection <br>of interesting inspirations and fashion <br> photos from all over the world</p>
+        </div>
+        <div class="right">
+          <video src="fashion.mp4" autoplay muted loop></video>
+        </div>
+        <div class="arrow">
+          <i class="ri-arrow-right-line"></i>
+        </div>
+        
+       </div>
+
+</body>
+</html>
